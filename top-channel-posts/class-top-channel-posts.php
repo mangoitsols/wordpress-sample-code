@@ -76,11 +76,11 @@ class Top_Channel_Posts extends WP_Widget {
 			if ( 'view' == $sort_by && '' == $ids ) {
 					$ids = array();
 				if ( function_exists( 'videopro_get_tptn_pop_posts' ) ) {
-					$args = array(
+					$vidoArgs = array(
 						'daily'      => 0,
 						'post_types' => 'ct_channel',
 					);
-					$ids  = videopro_get_tptn_pop_posts( $args );
+					$ids  = videopro_get_tptn_pop_posts( $vidoArgs );
 				}
 					$args = array(
 						'post_type'           => 'ct_channel',
